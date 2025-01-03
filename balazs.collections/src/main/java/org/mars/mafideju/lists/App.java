@@ -1,8 +1,6 @@
 package org.mars.mafideju.lists;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
+import java.util.*;
 
 public class App {
 
@@ -15,6 +13,10 @@ public class App {
 
     public void add(String item) {
         list.add(item);
+    }
+
+    public void add(Integer index, String item) {
+        list.add(index, item);
     }
 
     public void addAll(Collection<String> items) {
@@ -35,5 +37,12 @@ public class App {
 
     public void setList(List<String> list) {
         this.list = list;
+    }
+
+    public SortedSet<?> sortedList(Collection<?> linkedList) {
+
+        SortedSet<?> sortedList = new TreeSet<>(linkedList);
+
+        return sortedList;
     }
 }
