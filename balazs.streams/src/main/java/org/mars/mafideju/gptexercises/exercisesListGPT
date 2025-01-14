@@ -1,0 +1,111 @@
+Beginner Level
+Exercise 1: Filter Even Numbers
+Write a method that takes a list of integers and returns a list of only the even numbers using streams.
+
+
+public List<Integer> filterEvenNumbers(List<Integer> numbers) {
+    // TODO: Use streams to filter even numbers
+}
+Input Example: [1, 2, 3, 4, 5, 6]
+Expected Output: [2, 4, 6]
+
+Exercise 2: Convert Strings to Uppercase
+Write a method that takes a list of strings and converts all of them to uppercase using streams.
+
+java
+Copy code
+public List<String> toUpperCase(List<String> words) {
+    // TODO: Use streams to convert to uppercase
+}
+Input Example: ["apple", "banana", "cherry"]
+Expected Output: ["APPLE", "BANANA", "CHERRY"]
+
+Exercise 3: Find Strings Starting With a Letter
+Write a method that filters a list of strings to include only those starting with the letter 'A'.
+
+java
+Copy code
+public List<String> filterStartingWithA(List<String> words) {
+    // TODO: Use streams to filter strings
+}
+Input Example: ["apple", "banana", "apricot", "cherry"]
+Expected Output: ["apple", "apricot"]
+
+Intermediate Level
+Exercise 4: Sum of Squares of Numbers
+Write a method that takes a list of integers, squares each number, and returns the sum of all the squares.
+
+java
+Copy code
+public int sumOfSquares(List<Integer> numbers) {
+    // TODO: Use streams to calculate the sum of squares
+}
+Input Example: [1, 2, 3, 4]
+Expected Output: 30 (1² + 2² + 3² + 4² = 30)
+
+Exercise 5: Count Words with Specific Length
+Write a method that counts how many strings in a list have a length greater than a given number.
+
+java
+Copy code
+public long countWordsWithLength(List<String> words, int length) {
+    // TODO: Use streams to count words with a specific length
+}
+Input Example: ["apple", "banana", "cherry", "fig"], 5
+Expected Output: 2 ("apple" and "banana" have lengths greater than 5)
+
+Exercise 6: Grouping by Length
+Write a method that groups a list of strings by their lengths using the Collectors.groupingBy method.
+
+java
+Copy code
+public Map<Integer, List<String>> groupByLength(List<String> words) {
+    // TODO: Use streams to group words by their length
+}
+Input Example: ["a", "aa", "aaa", "b", "bb"]
+Expected Output: {1=["a", "b"], 2=["aa", "bb"], 3=["aaa"]}
+
+Exercise 7: Find the Longest String
+Write a method that finds the longest string in a list. If there are multiple strings of the same length, return any of them.
+
+java
+Copy code
+public String findLongestString(List<String> words) {
+    // TODO: Use streams to find the longest string
+}
+Input Example: ["apple", "banana", "cherry", "date"]
+Expected Output: "banana" or "cherry"
+
+Advanced Intermediate Level
+Exercise 8: Flatten a List of Lists
+Write a method that flattens a list of lists into a single list.
+
+java
+Copy code
+public List<Integer> flattenList(List<List<Integer>> listOfLists) {
+    // TODO: Use streams to flatten the list
+}
+Input Example: [[1, 2], [3, 4], [5, 6]]
+Expected Output: [1, 2, 3, 4, 5, 6]
+
+Exercise 9: Find the First String Starting with a Letter
+Write a method that finds the first string in a list that starts with a given letter. If no such string exists, return Optional.empty().
+
+java
+Copy code
+public Optional<String> findFirstStartingWith(List<String> words, char letter) {
+    // TODO: Use streams to find the first matching string
+}
+Input Example: ["apple", "banana", "cherry"], 'b'
+Expected Output: Optional["banana"]
+
+Exercise 10: Frequency Count of Characters
+Write a method that counts the frequency of each character in a string and returns a map.
+
+java
+Copy code
+public Map<Character, Long> charFrequency(String input) {
+    // TODO: Use streams to calculate character frequency
+}
+Input Example: "apple"
+Expected Output: {a=1, p=2, l=1, e=1}
