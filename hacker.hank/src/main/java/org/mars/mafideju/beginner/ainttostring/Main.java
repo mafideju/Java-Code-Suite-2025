@@ -1,9 +1,9 @@
-package LinkedList;
+package org.mars.mafideju.beginner.ainttostring;
 
 import java.util.*;
 import java.security.*;
 
-class Solution {
+class Main {
     public static void main(String[] args) {
 
         DoNotTerminate.forbidExit();
@@ -49,3 +49,4 @@ class DoNotTerminate {
         System.setSecurityManager(securityManager);
     }
 }
+
