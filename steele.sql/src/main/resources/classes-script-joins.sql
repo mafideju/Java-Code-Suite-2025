@@ -1,0 +1,6 @@
+SHOW DATABASES;
+USE `steele-mysql`;
+
+SHOW TABLES;
+
+SELECT * FROM books;
