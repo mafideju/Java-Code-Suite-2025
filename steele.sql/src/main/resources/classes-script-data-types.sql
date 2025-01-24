@@ -47,12 +47,14 @@ SELECT
     YEAR(birth_date)
 FROM facts;
 
+SHOW TABLES;
+
 -- EXERCICIOS
 -- CHAR -> usado quando sabe-se exatamente o tamanho do dado que será alocado. É um array, trabalha com tamanho fixo.
 
 CREATE TABLE inventory (
     item_name VARCHAR(50),
-    price DOUBLE,
+    price DECIMAL(7,2),
     quantity INTEGER
 );
 
@@ -63,7 +65,7 @@ CREATE TABLE inventory (
 SELECT CURTIME() - INTERVAL 3 HOUR, CURTIME();
 
 SELECT DAYOFWEEK(birth_date) FROM facts;
-SELECT DAY(birth_date) FROM facts;
+SELECT DAYNAME(birth_date) FROM facts;
 SELECT birth_date, DAY(birth_date), DATE_FORMAT(birth_date, '%W') FROM facts;
 
 SELECT birth_date, DATE_FORMAT(birth_date, GET_FORMAT(DATE,'USA')) FROM facts;
@@ -78,7 +80,10 @@ CREATE TABLE tweets (
    created_at TIMESTAMP default CURRENT_TIMESTAMP,
    updated_at TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
-
+INSERT INTO tweets(tweet_content, username)
+VALUES
+   ('Conversa fiada esporte clube é por qaui mesmo', 'mafideju');
 DESC tweets;
 
 SELECT * FROM facts;
+SELECT * FROM tweets;
