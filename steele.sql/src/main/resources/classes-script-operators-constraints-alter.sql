@@ -50,18 +50,51 @@ SELECT SUBSTR(title, 1, 20) AS Titulo FROM books;
 
 -- EXERCISES
 -- 1
+-- false, true, false
 
 -- 2
-
+SELECT *
+FROM books
+WHERE released_year < 1980;
 -- 3
-
+SELECT *
+FROM books
+WHERE author_lname = 'Eggers'
+    OR author_lname = 'Chabon';
 -- 4
-
+SELECT *
+FROM books
+WHERE author_lname = 'Lahiri'
+   AND released_year > 2000;
 -- 5
-
+SELECT *
+FROM books
+WHERE pages
+BETWEEN 100 AND 200;
 -- 6
-
+SELECT *
+FROM books
+WHERE author_lname LIKE 'S%'
+   OR author_lname LIKE 'C%';
 -- 7
+SELECT title, CONCAT(author_fname, ' ', author_lname) AS 'author name',
+    CASE
+        WHEN LOWER(title) LIKE '%stories%' THEN 'Short Stories'
+        WHEN LOWER(title) LIKE '%kids%' OR LOWER(title) LIKE '%heartbreaking%' THEN 'Memoir'
+        ELSE 'Novel'
+    END AS TYPE
+FROM books;
 
+-- BONUS
+SELECT author_fname, author_lname,
+    CASE
+       WHEN COUNT(title) = 1 THEN '1 book'
+       WHEN COUNT(title) = 2 THEN '2 books'
+       WHEN COUNT(title) = 3 THEN '3 books'
+    END AS Count
+FROM books
+GROUP BY author_fname, author_lname;
 
-
+SELECT *
+FROM books
+WHERE author_lname = 'Smith'
