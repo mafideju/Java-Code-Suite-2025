@@ -3,6 +3,8 @@
   <component name="SqlDialectMappings">
     <file url="file://$PROJECT_DIR$/src/main/resources/classes-script-constraints.sql" dialect="MySQL" />
     <file url="file://$PROJECT_DIR$/src/main/resources/classes-script-joins.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/classes-script-manytomany.sql" dialect="MySQL" />
     <file url="file://$PROJECT_DIR$/src/main/resources/classes-script-operators-constraints-alter.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/views.sql" dialect="MySQL" />
   </component>
 </project>
